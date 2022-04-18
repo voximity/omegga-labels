@@ -1,0 +1,30 @@
+{
+  "name": "labels",
+  "description": "Adds labels you can put on bricks",
+  "author": "voximity",
+  "config": {
+    "allowAll": {
+      "description": "Whether or not everyone can create labels freely.",
+      "type": "boolean",
+      "default": false
+    },
+    "auth": {
+      "description": "The list of people who can always create labels, and who can delete others' labels.",
+      "type": "list",
+      "itemType": "players",
+      "default": []
+    },
+    "banned": {
+      "description": "The list of people who can never create labels.",
+      "type": "list",
+      "itemType": "players",
+      "default": []
+    },
+    "maxLabels": {
+      "description": "The maximum number of labels a player can make, 0 for unlimited. If they are in the auth list, this does not apply to them.",
+      "type": "number",
+      "default": 10
+    }
+  },
+  "commands": []
+}
