@@ -444,6 +444,8 @@ export default class Plugin implements OmeggaPlugin<Config, Storage> {
             );
           } else if (subcommand === 'import') {
             // Import from `labels.json` or whatever was provided
+            if (!this.isAuthed(player)) return;
+
             const [confirm, ...rest] = args;
             if (confirm !== 'yes') {
               const restString = [confirm, ...rest].join(' ');
